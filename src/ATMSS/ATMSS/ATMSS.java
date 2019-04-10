@@ -12,6 +12,9 @@ public class ATMSS extends AppThread {
     private MBox keypadMBox;
     private MBox touchDisplayMBox;
 
+	private MBox cashDepositCollectorMBox;
+	private MBox cashdispenserMBox;
+
     //------------------------------------------------------------
     // ATMSS
     public ATMSS(String id, AppKickstarter appKickstarter) throws Exception {
@@ -29,12 +32,31 @@ public class ATMSS extends AppThread {
 	keypadMBox = appKickstarter.getThread("KeypadHandler").getMBox();
 	touchDisplayMBox = appKickstarter.getThread("TouchDisplayHandler").getMBox();
 
+	cashDepositCollectorMBox = appKickstarter.getThread("CashDepositCollectorHandler").getMBox();
+	cashdispenserMBox = appKickstarter.getThread("CashDispenserHandler").getMBox();
+
 	for (boolean quit = false; !quit;) {
 	    Msg msg = mbox.receive();
 
 	    log.fine(id + ": message received: [" + msg + "].");
 
 	    switch (msg.getType()) {
+			case CDepo_100:
+				log.info("Received: $100");
+				break;
+			case CDepo_500:
+				log.info("Received: $500");
+				break;
+			case CDepo_1000:
+				log.info("Received: $1000");
+				break;
+			case CDispense_Token:
+				log.info("Cash token");
+				break;
+			case CDispense_Refused:
+				log.info("Dispense refused by client / timeout");
+				break;
+
 		case KP_KeyPressed:
 		    log.info("KeyPressed: " + msg.getDetails());
 		    processKeyPressed(msg);

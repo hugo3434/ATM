@@ -42,6 +42,15 @@ public class Msg {
         CR_EjectCard, // Eject card
         CancelTimer, // Set a timer
         CashR_Open, // Open cash receiver
+        CDepo_100, // Deposit $100
+        CDepo_1000, // Deposit $1000
+        CDepo_500, // Deposit $500
+        CDispense_100, // Dispense $100
+        CDispense_1000, // Dispense $1000
+        CDispense_500, // Dispense $500
+        CDispense_Token, // cash Token
+        CDispense_Refused, // cash dispense refused by client / timeout
+
         KP_KeyPressed, // Key pressed
         Poll, // Health poll
         PollAck, // Health poll acknowledgement
