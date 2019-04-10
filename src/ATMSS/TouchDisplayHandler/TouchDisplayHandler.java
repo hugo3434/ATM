@@ -30,6 +30,10 @@ public class TouchDisplayHandler extends AppThread {
 		    atmss.send(new Msg(id, mbox, Msg.Type.PollAck, id + " is up!"));
 		    break;
 
+		    case CashR_Open:
+                atmss.send(new Msg(id, mbox, Msg.Type.CashR_Open, msg.getDetails()));
+                break;
+
 		case Terminate:
 		    quit = true;
 		    break;

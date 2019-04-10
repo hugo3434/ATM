@@ -37,16 +37,19 @@ public class Msg {
     //------------------------------------------------------------
     // Msg Types
     public enum Type {
-	Terminate,		// Terminate the running thread
-	SetTimer,		// Set a timer
-	CancelTimer,		// Set a timer
-	Tick,			// Timer clock ticks
-	TimesUp,		// Time's up for the timer
-	Poll,			// Health poll
-	PollAck,		// Health poll acknowledgement
-	CR_CardInserted,	// Card inserted
-	CR_CardRemoved,		// Card removed
-	CR_EjectCard,		// Eject card
-	KP_KeyPressed,		// Key pressed
+        CR_CardInserted, // Card inserted
+        CR_CardRemoved, // Card removed
+        CR_EjectCard, // Eject card
+        CancelTimer, // Set a timer
+        CashR_Open, // Open cash receiver
+        KP_KeyPressed, // Key pressed
+        Poll, // Health poll
+        PollAck, // Health poll acknowledgement
+        SetTimer, // Set a timer
+        Terminate, // Terminate the running thread
+        Tick, // Timer clock ticks
+        TimesUp // Time's up for the timer
+
+        ,    // Card inserted
     } // Type
 } // Msg

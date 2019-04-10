@@ -61,6 +61,10 @@ public class ATMSS extends AppThread {
 		    quit = true;
 		    break;
 
+            case CashR_Open:
+                log.severe("OPEN CASH RECEIVER");
+                break;
+
 		default:
 		    log.warning(id + ": unknown message type: [" + msg + "]");
 	    }

@@ -7,9 +7,8 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ATMSS.TouchDisplayHandler.Emulator.TouchDisplayEmulatorController">
-   <children>
-      <GridPane layoutY="29.0" prefHeight="392.0" prefWidth="600.0">
+
+      <GridPane layoutY="29.0" prefHeight="392.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ATMSS.TouchDisplayHandler.Emulator.mainMenuController">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -20,22 +19,25 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" style="-fx-background-color: blue;" text="-&gt; Deposit" textFill="#cbdd41" fx:id="deposit" onMouseClicked="#deposit">
+            <Button fx:id="deposit" mnemonicParsing="false" onMouseClicked="#deposit" style="-fx-background-color: blue;" text="-&gt; Deposit" textFill="#cbdd41">
                <font>
                   <Font name="Silom" size="25.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" style="-fx-background-color: blue;" text="-&gt; Withdraw" textFill="#cbdd41" GridPane.rowIndex="1" fx:id="withdraw">
+            <Button fx:id="withdraw" mnemonicParsing="false" onMouseClicked="#withdraw" style="-fx-background-color: blue;" text="-&gt; Withdraw" textFill="#cbdd41" GridPane.rowIndex="1">
                <font>
                   <Font name="Silom" size="25.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" style="-fx-background-color: blue;" text="-&gt; Account" textFill="#cbdd41" GridPane.rowIndex="2" fx:id="account">
+            <Button fx:id="account" mnemonicParsing="false" style="-fx-background-color: blue;" text="-&gt; Account" textFill="#cbdd41" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Silom" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="eject" mnemonicParsing="false" style="-fx-background-color: blue;" text="Eject Card &lt;-" textFill="#cbdd41" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" onMouseClicked="#Eject">
                <font>
                   <Font name="Silom" size="25.0" />
                </font>
             </Button>
          </children>
       </GridPane>
-   </children>
-</AnchorPane>
