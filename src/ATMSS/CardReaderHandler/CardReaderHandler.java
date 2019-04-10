@@ -1,5 +1,6 @@
 package ATMSS.CardReaderHandler;
 
+import ATMSS.BAMSHandler.BAMSHandler;
 import AppKickstarter.AppKickstarter;
 import AppKickstarter.misc.*;
 
