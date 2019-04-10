@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ATMSS.TouchDisplayHandler.Emulator.TouchDisplayEmulatorController">
+   <children>
+      <GridPane layoutY="29.0" prefHeight="392.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" style="-fx-background-color: blue;" text="-&gt; Deposit" textFill="#cbdd41" fx:id="deposit" onMouseClicked="#deposit">
+               <font>
+                  <Font name="Silom" size="25.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" style="-fx-background-color: blue;" text="-&gt; Withdraw" textFill="#cbdd41" GridPane.rowIndex="1" fx:id="withdraw">
+               <font>
+                  <Font name="Silom" size="25.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" style="-fx-background-color: blue;" text="-&gt; Account" textFill="#cbdd41" GridPane.rowIndex="2" fx:id="account">
+               <font>
+                  <Font name="Silom" size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
