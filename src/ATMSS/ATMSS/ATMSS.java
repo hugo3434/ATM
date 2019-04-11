@@ -43,6 +43,8 @@ public class ATMSS extends AppThread {
 	    switch (msg.getType()) {
 			case CDepo_100:
 				log.info("Received: $100");
+				System.out.println(": " +msg.getDetails());
+				Printer(msg);
 				break;
 			case CDepo_500:
 				log.info("Received: $500");
@@ -104,6 +106,19 @@ public class ATMSS extends AppThread {
         // *** The following is an example only!! ***
         if (msg.getDetails().compareToIgnoreCase("Cancel") == 0) {
 	    cardReaderMBox.send(new Msg(id, mbox, Msg.Type.CR_EjectCard, ""));
+			System.out.println("test2");
 	}
+
     } // processKeyPressed
+
+	private void Printer(Msg msg){
+
+		if(msg.getDetails().equalsIgnoreCase("Deposit 100")){
+			cardReaderMBox.send(new Msg(id,mbox, Msg.Type.CDepo_100,""));
+			System.out.println("test3");
+		}
+
+}
+
+
 } // CardReaderHandler

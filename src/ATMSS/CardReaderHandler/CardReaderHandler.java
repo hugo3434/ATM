@@ -1,6 +1,6 @@
 package ATMSS.CardReaderHandler;
 
-import ATMSS.BAMSHandler.BAMSHandler;
+//import ATMSS.BAMSHandler.BAMSHandler;
 import AppKickstarter.AppKickstarter;
 import AppKickstarter.misc.*;
 
@@ -19,6 +19,7 @@ public class CardReaderHandler extends AppThread {
     // run
     public void run() {
         MBox atmss = appKickstarter.getThread("ATMSS").getMBox();
+
 	log.info(id + ": starting...");
 
 	for (boolean quit = false; !quit;) {
@@ -27,9 +28,18 @@ public class CardReaderHandler extends AppThread {
 	    log.fine(id + ": message received: [" + msg + "].");
 
 	    switch (msg.getType()) {
+
+	    case CDepo_100:
+	    	System.out.println("test1");
+	    	handlePrinter();
+	    	break;
+
+
 		case CR_CardInserted:
 		    atmss.send(new Msg(id, mbox, Msg.Type.CR_CardInserted, msg.getDetails()));
-		    System.out.println("HANDLER RECEIVED!!!!");
+		    System.out.println("555HANDLER RECEIVED!!!!");
+//		    System.out.println(msg.getType());
+//			System.out.println("test " + msg);
 		    break;
 
 		case CR_EjectCard:
@@ -80,4 +90,7 @@ public class CardReaderHandler extends AppThread {
     protected void handleCardRemove() {
 	log.info(id + ": card removed");
     } // handleCardRemove
+
+
+	protected void handlePrinter() {log.info(id + ": print");}
 } // CardReaderHandler

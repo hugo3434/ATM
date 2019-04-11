@@ -34,6 +34,8 @@ public class CashDepositCollectorEmulatorController {
         switch (btn.getText()) {
             case "Deposit 100":
                 System.out.println("Deposit 100");
+                System.out.println(": "+ id);
+
                 CashDepositCollectorMBox.send(new Msg(id, CashDepositCollectorMBox, Msg.Type.CDepo_100, "Deposit 100"));
                 break;
 

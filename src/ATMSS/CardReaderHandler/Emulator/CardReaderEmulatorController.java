@@ -22,6 +22,7 @@ public class CardReaderEmulatorController {
     public TextField cardNumField;
     public TextField cardStatusField;
     public TextArea cardReaderTextArea;
+    public Msg msg;
 
 
     //------------------------------------------------------------
@@ -35,7 +36,13 @@ public class CardReaderEmulatorController {
     } // initialize
 
 
-    //------------------------------------------------------------
+///	public Msg getMsg() {
+//////////		String balance = "";
+//////////		balance = msg.getTy();
+//////////	}/
+
+
+	//------------------------------------------------------------
     // buttonPressed
     public void buttonPressed(ActionEvent actionEvent) {
 	Button btn = (Button) actionEvent.getSource();
@@ -92,4 +99,7 @@ public class CardReaderEmulatorController {
     public void appendTextArea(String status) {
 	cardReaderTextArea.appendText(status+"\n");
     } // appendTextArea
+
+
+
 } // CardReaderEmulatorController
