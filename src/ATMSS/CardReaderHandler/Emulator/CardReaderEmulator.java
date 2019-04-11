@@ -29,7 +29,7 @@ public class CardReaderEmulator extends CardReaderHandler {
     } // CardReaderEmulator
 
 	//
-
+//
     //------------------------------------------------------------
     // start
     public void start() throws Exception {
