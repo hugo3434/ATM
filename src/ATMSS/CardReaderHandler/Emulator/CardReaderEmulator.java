@@ -28,6 +28,7 @@ public class CardReaderEmulator extends CardReaderHandler {
 	this.id = id;
     } // CardReaderEmulator
 
+	//
 
     //------------------------------------------------------------
     // start
