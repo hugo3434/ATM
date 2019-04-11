@@ -35,11 +35,7 @@ public class CardReaderEmulatorController {
 	this.cardReaderMBox = appKickstarter.getThread("CardReaderHandler").getMBox();
     } // initialize
 
-
-///	public Msg getMsg() {
-//////////		String balance = "";
-//////////		balance = msg.getTy();
-//////////	}/
+	
 
 
 	//------------------------------------------------------------
